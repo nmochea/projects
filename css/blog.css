@@ -1,0 +1,286 @@
+/* Global styles 
+* {
+  outline: 1px solid red;
+} */
+
+html {
+    scroll-behavior: smooth;
+    height: 100%;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    font-family: "Mona Sans", "Mona Sans Header Fallback", -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+    background-color: #f2f2f2;
+    color: #222;
+}
+
+/* Header styles */
+header {
+    background-color: #f2f2f2;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 7px;
+    top: 0;
+    left: 0;
+    right: 0;
+    flex-shrink: 0;
+}
+
+header img {
+    max-width: 100%;
+    height: auto;
+    max-height: 40px;
+}
+
+nav {
+    width: 100%;
+    background-color: #f2f2f2;
+}
+
+nav ul {
+    list-style: none;
+    margin: 0;
+    padding: 10px 0;
+    display: flex;
+    justify-content: center !important;
+}
+
+nav li {
+    margin-right: 25px;
+}
+
+nav a {
+    font-size: 20px;
+    color: #222;
+    text-decoration: none;
+    padding: 5px 10px;
+}
+
+nav a:hover {
+    color: #555;
+}
+
+/* Hamburger menu icon */
+#menu-toggle {
+    display: none;
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+    padding: 10px;
+    margin-left: auto;
+}
+
+#menu-toggle span {
+    display: block;
+    width: 20px;
+    height: 2px;
+    background-color: #111;
+    margin: 4px 0;
+}
+
+@media (max-width: 768px) {
+    nav {
+        display: none;
+        position: absolute;
+        top: 50px;
+        left: 0;
+        width: 100%;
+    }
+
+    nav.active {
+        display: flex;
+    }
+
+    nav ul {
+        display: block;
+        text-align: center;
+        margin-bottom: 20px;
+    }
+
+    nav li {
+        margin-right: 0;
+        margin-bottom: 7px;
+      }
+
+    nav a {
+        font-size: 20px;
+    }
+
+    #menu-toggle {
+        display: block;
+    }
+
+    #menu-toggle.active span:first-child {
+        transform: rotate(45deg) translate(5px, 5px);
+    }
+
+    #menu-toggle.active span:nth-child(2) {
+        opacity: 0;
+    }
+
+    #menu-toggle.active span:last-child {
+        transform: rotate(-45deg) translate(5px, -5px);
+    }
+}
+
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+    min-height: 90vh;
+  }
+  
+  .title-container {
+    text-align: center;
+    margin-top: 20px;
+  }
+  
+  .title-container h1 {
+    font-size: 32px;
+    margin-bottom: 20px;
+    border-bottom: 2px solid grey; 
+    display: inline-block;
+  }
+
+.card-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    margin-top: 50px;
+}
+
+.card {
+    width: calc(33.33% - 20px);
+    margin-bottom: 40px;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease;
+    min-width: 350px;
+}
+
+.container .card:hover {
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    transform: translateY(-2px);
+}
+
+@media screen and (max-width: 992px) {
+    .card {
+        width: calc(50% - 20px);
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .card {
+        width: 100%;
+    }
+}
+
+.card img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+}
+
+.card-content {
+    padding: 20px;
+}
+
+.card-title {
+    font-size: 24px;
+    margin-bottom: 10px;
+}
+
+.card-description {
+    font-size: 16px;
+    margin-bottom: 20px;
+    line-height: 1.5;
+}
+
+.card-read-more {
+    display: block;
+    text-align: right;
+    font-weight: bold;
+    color: #222;
+    text-decoration: none;
+}
+
+
+/* Footer styles */
+.footer {
+    flex-shrink: 0;
+    margin-top: 10px;
+}
+
+.footer p {
+    margin: 0;
+    font-size: 16px;
+    text-align: center;
+    padding: 10px;
+    border-radius: 5px;
+}
+
+.footer a {
+    color: #222;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+/* Media queries */
+@media screen and (max-width: 768px) {
+    .menu {
+        width: 100%;
+        justify-content: center;
+        margin-top: 20px;
+        margin-bottom: 0;
+        /* remove margin-bottom */
+    }
+
+    .menu li {
+        font-size: 18px;
+        margin: 0 10px;
+    }
+
+    .main button {
+        padding: 8px 16px;
+        font-size: 16px;
+    }
+
+    .main {
+        padding: 30px;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .main img {
+        max-width: 60%;
+        margin-bottom: 20px;
+    }
+
+    .main h1 {
+        font-size: 30px;
+        margin-bottom: 10px;
+    }
+
+    .main p {
+        font-size: 23px;
+        padding-top: 10px;
+        padding-bottom: 20px;
+        padding-left: 25px;
+        padding-right: 25px;
+    }
+
+    nav ul li a {
+        font-size: 18px;
+    }
+
+    nav li {
+        padding: 7px 0 5px 0;
+    }
+}

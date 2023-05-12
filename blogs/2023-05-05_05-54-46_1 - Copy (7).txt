@@ -1,0 +1,8 @@
+<div class='card'>
+    <img src='https://via.placeholder.com/800x500.png?text=Blog+Post+1' alt='Blog Post 1'>
+    <div class='card-content'>
+        <h2 class='card-title'>Blog Test 1</h2>
+        <p class='card-description'>Test me now 123</p>
+        <a href='https://evil.com' target='_blank' class='card-read-more'>Read more</a>
+    </div>
+</div>
